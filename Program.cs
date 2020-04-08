@@ -7,37 +7,56 @@ namespace Overloading
     {
         static void Main(string[] args)
         { 
-            
+            double [] doubleArray = {2.23, 34.54, 34, 32.54, 43};
+            Console.WriteLine("Before using Methods...");
+            foreach (var item in doubleArray)
+            {
+                Console.WriteLine(item);
+            }
+            double someElement = 23.4d;
+            double forDelite = 1;
+            Console.WriteLine("after using Pow...");
+            double checkPow = ArrayHelder.Pow(ref doubleArray);
+            Console.WriteLine(checkPow + "<-- was delited");
+            Console.WriteLine("after using Push...");
+            double checkPush = ArrayHelder.Push(ref doubleArray, forDelite);
+            Console.WriteLine(checkPush);
+            Console.WriteLine("after using Shift... <-- ");
+            double checkShift = ArrayHelder.Shift(ref doubleArray);
+            Console.WriteLine(checkShift);
+            Console.WriteLine("after using unShift...");
+            double checkUnShift = ArrayHelder.UnShift(ref doubleArray, someElement);
+            Console.WriteLine(checkUnShift);
         }
     }
-    static class ArrayHelder
+    public static class ArrayHelder
     {
         
-        static string Pow( ref string [] array )
+        public static string Pow( ref string [] array )
         {
             string arr = array[array.Length-1];
             Array.Resize(ref array,array.Length-1);
             return arr;
         }
-        static int Pow( ref int [] array )
+        public static int Pow( ref int [] array )
         {
             int arr = array[array.Length-1];
             Array.Resize(ref array,array.Length-1);
             return arr;
         }
-        static double Pow( ref double [] array )
+        public static double Pow( ref double [] array )
         {
             double arr = array[array.Length-1];
             Array.Resize(ref array,array.Length-1);
             return arr;
         }
-        static decimal Pow( ref decimal [] array )
+        public static decimal Pow( ref decimal [] array )
         {
             decimal arr = array[array.Length-1];
             Array.Resize(ref array,array.Length-1);
             return arr;
         }
-        static float Pow( ref float [] array )
+        public static float Pow( ref float [] array )
         {
             float arr = array[array.Length-1];
             Array.Resize(ref array,array.Length-1);
