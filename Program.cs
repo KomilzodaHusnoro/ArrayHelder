@@ -7,8 +7,7 @@ namespace Overloading
     {
         static void Main(string[] args)
         { 
-
-
+            
         }
     }
     static class ArrayHelder
@@ -128,6 +127,46 @@ namespace Overloading
             float firstElement = array[0];
             array = newarray;
             return firstElement;
+        }
+        public static int UnShift (ref string [] array, string newElement)
+        {
+            Array.Reverse(array);
+            Array.Resize(ref array, array.Length+1);
+            array[array.Length-1]= newElement;
+            Array.Reverse(array);
+            return array.Length;
+        }
+        public static int UnShift (ref int [] array, int newElement)
+        {
+            Array.Reverse(array);
+            Array.Resize(ref array, array.Length+1);
+            array[array.Length-1]= newElement;
+            Array.Reverse(array);
+            return array.Length;
+        }
+        public static int UnShift (ref double [] array, double newElement)
+        {
+            Array.Reverse(array);
+            Array.Resize(ref array, array.Length+1);
+            array[array.Length-1]= newElement;
+            Array.Reverse(array);
+            return array.Length;
+        }
+        public static int UnShift (ref decimal [] array, decimal newElement)
+        {
+            Array.Reverse(array);
+            Array.Resize(ref array, array.Length+1);
+            array[array.Length-1]= newElement;
+            Array.Reverse(array);
+            return array.Length;
+        }
+         public static int UnShift (ref float[] array,float newElement)
+        {
+            Array.Reverse(array);
+            Array.Resize(ref array,array.Length+1);
+            array[array.Length-1] = newElement;
+            Array.Reverse(array);
+            return array.Length;
         }
         
         
