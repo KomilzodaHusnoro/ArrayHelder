@@ -29,6 +29,9 @@ namespace Overloading
             Console.WriteLine(checkUnShift);
         }
     }
+    /// <summary>
+    /// не забыть довить пользовательский ввод!
+    /// </summary>
     public static class ArrayHelder
     {
         
